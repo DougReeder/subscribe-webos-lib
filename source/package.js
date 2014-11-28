@@ -3,6 +3,7 @@ enyo.depends(
 	"$lib/layout",
 	// Onyx UI library
 	"$lib/onyx",	// To theme Onyx using Theme.less, change this line to $lib/onyx/source,
+	"$lib/webos-lib",
 	// CSS/LESS style files
 	"style",
 	// Model and data definitions

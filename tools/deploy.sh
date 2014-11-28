@@ -14,6 +14,7 @@ TOOLS=$(cd `dirname $0` && pwd)
 
 # application root
 SRC="$TOOLS/.."
+DEST="$SRC/deploy"
 
 # enyo location
 ENYO="$SRC/enyo"
@@ -34,17 +35,12 @@ fi
 # copy files and package if deploying to cordova webos
 while [ "$1" != "" ]; do
 	case $1 in
-		-w | --cordova-webos )
-			# copy appinfo.json and cordova*.js files
-			DEST="$TOOLS/../deploy/"${PWD##*/}
-			
-			cp "$SRC"/appinfo.json "$DEST" -v
-			cp "$SRC"/cordova*.js "$DEST" -v
-			
-			# package it up
-			mkdir -p "$DEST/bin"
-			palm-package "$DEST/bin"
-			;;
+        -w | --webos )
+            cp "$SRC"/appinfo.json "$DEST"
+            
+            # package it up
+            palm-package "$DEST"
+            ;;
 	esac
 	shift
 done

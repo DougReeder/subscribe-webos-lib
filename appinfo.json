@@ -1,0 +1,10 @@
+{
+    "id": "com.palm.subscribe.webos.lib",
+    "version": "0.0.1",
+    "vendor": "The Example Org.",
+    "type": "web",
+    "main": "index.html",
+    "title": "Subscribe webos-lib",
+    "icon": "icon.png",
+    "uiRevision": 2
+}
